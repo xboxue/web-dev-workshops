@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "mdx-deck": "^3.0.13"
+  },
+  "dependencies": {
+    "@rebass/forms": "^4.0.6",
+    "@theme-ui/components": "^0.2.50",
+    "rebass": "^4.0.7",
+    "styled-icons": "^9.2.0",
+    "theme-ui": "^0.2.52"
+  },
+  "resolutions": {
+    "mdx-deck/**/gatsby": "2.18.4"
+  }
+}

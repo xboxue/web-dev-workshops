@@ -1,0 +1,505 @@
+import { Box, Flex } from "rebass";
+import { Checkbox, Label, Input, Radio } from "@rebass/forms"
+import { Syllabus } from "../components/Syllabus";
+import { prism } from "mdx-deck/themes";
+import backend from "./backend.png";
+import frontend from "./frontend.png";
+
+export const themes = [ prism ]
+
+# Git, HTML, CSS
+
+---
+
+Workshops every Monday 4:10-5:30 CB 2400
+
+<Box overflow="auto" width={1/2} fontSize={[3]}>
+  <Syllabus />
+</Box>
+
+---
+
+### What's the point of these workshops?
+
+- Learn modern web development
+- Build a project
+- Be good
+
+---
+
+## Frontend roadmap
+
+<Box overflow="auto" width={1/2}>
+  <img src={frontend} />
+</Box>
+
+---
+
+## Backend roadmap
+
+<Box overflow="auto" width={1/2}>
+  <img src={backend} />
+</Box>
+
+---
+
+### You should come if:
+
+- You want to learn how to build a website
+- You want a job
+- You have nothing better to do for 1 hour
+
+---
+
+## Frontend vs Backend
+
+- Frontend is what users see and interact with
+- HTML, CSS, Javascript
+- Backend is everything else
+
+---
+
+<Flex flexDirection="row" alignItems="center">
+<Box mr={5} fontWeight="bold">
+HTML
+
+CSS
+
+Javascript
+</Box>
+<Box>
+Structure of web page (nouns)
+
+Style of HTML (adjectives)
+
+Logic and interactivity of web page (verbs)
+</Box>
+</Flex>
+
+---
+
+# HTML
+
+---
+
+## What is HTML?
+
+- HyperText Markup Language
+- Structure of web page
+
+---
+
+## HTML Syntax
+
+```jsx
+<tag attribute="value">content</tag>
+```
+
+---
+
+## HTML Structure
+
+<Box>
+
+```jsx
+<!DOCTYPE html> 
+<html> 
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1> 
+  </body>
+</html>
+```
+
+</Box>
+
+---
+
+## HTML Structure
+
+<Flex flexDirection="row" alignItems="center">
+<Box mr={5} fontWeight="bold">
+
+`<!DOCTYPE html>`
+
+`<html>`
+
+`<head>`
+
+`<title>`
+
+`<body>`
+
+</Box>
+<Box>
+
+Indicates use of HTML5
+
+Root element
+
+Information about document 
+
+Title in browser tab
+
+Content to be displayed
+
+</Box>
+</Flex>
+
+
+---
+
+## Heading
+
+<Box>
+
+- Block-level element
+
+```jsx
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+
+</Box>
+
+--- 
+
+<Box> 
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+</Box>
+
+---
+
+## Paragraph and Link
+
+```jsx
+<p>This is paragraph</p>
+<a href="url">This is a link</a>
+<p>Ambitious <a href="url">crossover</a></p>
+```
+
+<p>This is paragraph</p>
+<a href="url">This is a link</a>
+<p>Ambitious <a href="url">crossover</a></p>
+
+---
+
+## Unordered List
+
+```jsx
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+---
+
+## Ordered List
+
+```jsx
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+```
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+
+---
+
+## Div and Span
+
+- Containers to group elements together
+
+<Box fontSize={5}>
+
+```jsx
+<div>
+  <p>Help.</p>
+</div>
+<div>
+  <p>I'm being <span>grouped together</span></p>
+</div>
+```
+
+</Box>
+
+<Box>
+  <div>
+    <p>Help.</p>
+  </div>
+  <div>
+    <p>I'm being <span>grouped together</span></p>
+  </div>
+</Box>
+
+---
+
+## Attributes
+- Add additional information to element
+
+```jsx
+<div name="value">content</div>
+```
+
+---
+
+## Forms
+
+```jsx
+<input type="text" />
+<input type="password" />
+<input type="radio" />
+<input type="checkbox" />
+```
+
+<Box>
+  <Input type="text" />
+  <Input type="password" />
+  <Label>
+    <Radio size={50}/>
+  </Label>
+  <Label>
+    <Checkbox size={50}/>
+  </Label>
+</Box>
+
+---
+
+## Labels
+
+```jsx
+<label for="example">Example</label>
+<input type="text" id="example"/>
+```
+
+<Box>
+<Label for="example">Example</Label>
+<Input type="text" id="example"/>
+</Box>
+
+---
+
+## CSS
+
+---
+
+## What is CSS?
+
+- Cascading Stylesheets
+- Style of the page
+
+---
+
+## Syntax
+
+```jsx
+selector {
+  property: value;
+  property: value;
+}
+```
+
+---
+
+## How do we use CSS?
+
+1. Inline
+2. Style tags
+3. Stylesheets
+
+---
+
+## Inline
+
+```jsx
+  <p style="color: blue">Don't do this</p>
+```
+
+<p style="color: blue">Don't do this</p>
+
+---
+
+## Style tags
+```jsx
+<html>
+  <head>
+    <style>
+      p: {
+        color: blue
+      }
+    </style>
+  </head>
+```
+
+---
+
+## Stylesheets
+
+```jsx
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+```
+
+---
+
+## How do we style the right elements?
+- Selectors
+
+---
+
+## Selectors
+- Type selector elementname
+- Class selector .classname
+- ID selector #idname
+- Attribute selector [attr=value]
+
+---
+
+## Combining
+- div.highlight
+- div, span
+- div span
+- div > span
+- div ~ span
+- div + span
+
+---
+
+## Specificity
+1. Type selector elementname
+2. Class selector .classname
+3. ID selector #idname
+
+---
+
+## Color
+- Keyword
+- RGB (hex value or rgb() or rgba())
+- HSL (hsl() or hsla()) 
+
+---
+
+# Git
+
+---
+
+## What is Git? Why do we use it?
+
+- Distributed version control system 
+- Tracks changes in project files over time
+- Who made what changes and when
+- Revert back at any time
+- Coordinates work between multiple developers on project
+
+---
+
+## Concepts
+- Repositories
+- Commits and Staging
+- Branches
+
+---
+
+## Repositories
+- Project tracked by Git
+- Local - isolated repo stored on your own computer
+- Remote - stored on server (Github), share your project code with others
+
+---
+
+## Staging and Commiting
+- Commits are snapshots of your projects
+- Staging adds files to be commited
+
+--- 
+
+## Download Git
+
+https://git-scm.com/downloads
+
+---
+
+## Setup
+
+```jsx
+git config --global user.name "Your Name"
+git config --global user.email “your@email.com”
+```
+---
+
+## Making a commit
+
+```jsx
+git init
+git add file.js
+git commit -m "Commit message"
+```
+
+---
+
+## What's going on
+
+<Box bg="#dedede">Working Directory</Box>
+<Box bg="#dedede">Staging Area</Box>
+<Box bg="#dedede">Repository</Box>
+
+---
+
+Commit your html file
+Create a new branch
+Commit your CSS files
+Merge your branch to master
+
+---
+
+## Github 
+
+- Hosting platform for Git repositories
+- Makes it easy to collaborate and share code with others
+
+---
+
+Pushing our repo to Github
+
+```jsx
+git remote add origin https://github.com/<username>/<repo>.git
+git push -u origin master
+```
+--- 
+
+Cloning our repo
+
+```jsx
+git clone
+git pull
+```
+
+---
+
+Branching and Pull requests
+
+
+pull requests
