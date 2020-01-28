@@ -11,9 +11,9 @@ export const themes = [ prism ]
 
 ---
 
-Workshops every Monday 4:10-5:30 CB 2400
+### Workshops every Monday 4:10-5:30 CB 2400
 
-<Box overflow="auto" width={1/2} fontSize={[3]}>
+<Box overflow="auto" width={1/2} fontSize={3}>
   <Syllabus />
 </Box>
 
@@ -148,6 +148,16 @@ Content to be displayed
 </Box>
 </Flex>
 
+---
+
+### Block and Inline Elements
+
+<Box width={1/2}>
+
+- **Block elements** start on a new line and take up full width of parent
+- **Inline elements** don't start on a new line and only take up width of content
+
+</Box>
 
 ---
 
@@ -184,12 +194,21 @@ Content to be displayed
 ```jsx
 <p>This is paragraph</p>
 <a href="url">This is a link</a>
-<p>Ambitious <a href="url">crossover</a></p>
+<p>Links are inline <a href="url">elements</a></p>
 ```
 
 <p>This is paragraph</p>
 <a href="url">This is a link</a>
-<p>Ambitious <a href="url">crossover</a></p>
+<p>Links are inline <a href="url">elements</a></p>
+
+---
+
+```jsx
+<h2>Headings are block elements</h2>
+<p>So are paragraphs. <em>These</em> are <strong>inline</strong></p>
+```
+<h2>Headings are block elements</h2>
+<p>So are paragraphs. <em>These</em> are <strong>inline</strong></p>
 
 ---
 
@@ -229,26 +248,14 @@ Content to be displayed
 
 - Containers to group elements together
 
-<Box fontSize={5}>
-
 ```jsx
-<div>
-  <p>Help.</p>
-</div>
-<div>
-  <p>I'm being <span>grouped together</span></p>
-</div>
+<div>Divs are block elements</div>
+<div>Spans are<span>inline</span></div>
 ```
 
-</Box>
-
 <Box>
-  <div>
-    <p>Help.</p>
-  </div>
-  <div>
-    <p>I'm being <span>grouped together</span></p>
-  </div>
+  <div>Divs are block elements</div>
+  <div>Spans are <span>inline</span></div>
 </Box>
 
 ---
@@ -277,10 +284,10 @@ Content to be displayed
   <Input type="text" />
   <Input type="password" />
   <Label>
-    <Radio size={50}/>
+    <Radio size={30} defaultChecked/>
   </Label>
   <Label>
-    <Checkbox size={50}/>
+    <Checkbox size={30} defaultChecked/>
   </Label>
 </Box>
 
@@ -304,7 +311,7 @@ Content to be displayed
 
 ---
 
-## CSS
+# CSS
 
 ---
 
@@ -376,10 +383,10 @@ selector {
 ---
 
 ### How do we style elements? Selectors
-- **Type selector:** elementname
-- **Class selector:** .classname
-- **ID selector:** #idname
-- **Attribute selector:** [attr=value]
+- **Type selector** elementname
+- **Class selector** .classname
+- **ID selector** #idname
+- **Attribute selector** [attr=value]
 
 ---
 
@@ -394,11 +401,17 @@ selector {
 ---
 
 ## Specificity
-Least specific to most specific
 
-1. Type selector elementname
-2. Class selector .classname
-3. ID selector #idname
+<Box width={1/2}>
+
+- More specific selectors take precedence over less specific ones 
+- Selectors from least to most specific:
+
+</Box>
+
+1. **Type selector** elementname
+2. **Class selector** .classname
+3. **ID selector** #idname
 
 ---
 
@@ -408,9 +421,13 @@ Least specific to most specific
 
 ## What is Git? Why do we use it?
 
+<Box width={1/2}>
+
 - Distributed version control system 
 - Tracks changes in project files over time
 - Coordinates work between multiple developers on project
+
+</Box>
 
 ---
 
@@ -440,9 +457,14 @@ Least specific to most specific
 --- 
 
 ## Branches
+
+<Box width={1/2}>
+
 - Individual timeline of project commits
 - Master branch contains stable code
 - Add new features in separate branches and merge
+
+</Box>
 
 ---
 
@@ -495,7 +517,10 @@ git checkout <name>
 ---
 
 ## Merging changes
-- Merge changes from a different branch into current branch
+
+<Box width={1/2}>
+Merge changes from a different branch into current branch
+</Box>
 
 ```jsx
 git merge <name>
@@ -506,15 +531,19 @@ git merge <name>
 ## Exercise
 1. Commit your HTML files
 2. Create a new branch
-3. Commit CSS files
+3. Commit your CSS files
 4. Merge your branch to master
 
 ---
 
 ## Github 
 
+<Box width={1/2}>
+
 - Hosting platform for Git repositories
 - Makes it easy to collaborate and share code with others
+
+</Box>
 
 ---
 
@@ -541,7 +570,7 @@ git pull
 
 ---
 
-### What's going on
+## What's going on
 
 <img src="https://raw.githubusercontent.com/rachelcarmena/how-to-teach/master/git/pull.png" />
 

@@ -32,13 +32,13 @@ export const themes = [prism];
 
 - Every HTML element is a box
 
-<Box bg="#dedede" px={5} pb={5} pt={4} mt={4} fontSize={5}>
+<Box bg="#dedede" px={4} pb={4} pt={3} mt={4} fontSize={4}>
   Margin
-  <Box bg="papayawhip" px={4} pb={4} pt={1}>
+  <Box bg="papayawhip" px={3} pb={3} pt={1}>
     Border
-    <Box bg="lightblue" px={5} pb={5} pt={4}>
+    <Box bg="lightblue" px={4} pb={4} pt={3}>
       Padding
-      <Box bg="white" p={6}>
+      <Box bg="white" p={5}>
         Content
       </Box>
     </Box>
@@ -126,18 +126,15 @@ div {
 
 ### Vertical Margins Collapse
 
-<Box fontSize={5}>
-
 ```jsx
 div {
   // Vertical Horizontal
   margin: 20px 40px;
 }
 ```
-</Box>
 
 <Box bg="lightblue" my={20}>Box 1</Box>
-<Box bg="pink">Paragraph</Box>
+<Box bg="pink">Box 2</Box>
 
 ---
 
