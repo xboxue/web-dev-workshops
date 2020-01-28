@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="jumbotron">
+        <h1 class="display-4">
+          Frodo's Flapjacks
+        </h1>
+        <hr class="my-4" />
+        <p>Minimum order: $35</p>
+        <p>Delivery fee: $6</p>
+
+        <select class="form-control">
+          <option>
+            Frodo's Flapjacks
+          </option>
+          <option>
+            Aragorn's Orc BBQ
+          </option>
+        </select>
+      </div>
+
+      <div id="main">
+        <div id="category">
+          <p><a href="#">Breakfast</a></p>
+        </div>
+        <div id="menu">
+          <div class="menu-item">
+            <div>
+              <div>
+                <h4>Hobbit Hash</h4>
+                <p>Five flapjacks, potatoes, leeks, garlic, cheese.</p>
+                <p>$9</p>
+              </div>
+            </div>
+            <button class="btn btn-outline-primary btn-sm button">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div id="order">
+          <h3>Order Summary</h3>
+          <div class="order-item">
+            <div>
+              <h5>Hobbit Hash</h5>
+              <div>Quantity: 1</div>
+              <p>Price: $9</p>
+            </div>
+            <button class="btn btn-outline-danger btn-sm button">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+          <div class="order-item">
+            <div>
+              <h5>Sausage Sandwich</h5>
+              <div>Quantity: 1</div>
+              <p>Price: $9</p>
+            </div>
+            <button class="btn btn-outline-danger btn-sm button">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+          <hr />
+          <div>
+            <div>Subtotal: $10.00</div>
+            <div>Delivery fee: $1.13</div>
+            <p>Tax: $0.00</p>
+            <h5>Total: $11.13</h5>
+          </div>
+          <button class="btn btn-primary">Submit</button>
+          <div class="alert alert-success my-2">
+            Order submitted
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="client.js"></script>
+  </body>
+</html>

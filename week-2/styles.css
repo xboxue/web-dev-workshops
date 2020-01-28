@@ -1,0 +1,40 @@
+#container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+#menu {
+  flex: 1 500px;
+  margin: 0 40px;
+}
+
+#order {
+  flex: 1 250px;
+  margin: 0 40px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  height: 100%;
+}
+
+.form-control {
+  width: 300px;
+}

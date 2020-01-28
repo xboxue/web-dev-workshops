@@ -1,0 +1,309 @@
+import { Box, Flex } from "rebass";
+import { Syllabus } from "../components/Syllabus";
+import { prism } from "mdx-deck/themes";
+
+export const themes = [prism];
+
+# CSS and Bootstrap
+
+---
+
+### Block and Inline Elements
+
+<Box width={1/2}>
+
+- **Block elements** start on a new line and take up full width of parent
+- **Inline elements** don't start on a new line and only take up width of content
+
+</Box>
+
+---
+
+```jsx
+<h2>Headings are block elements</h2>
+<p>So are paragraphs. <em>These</em> are <strong>inline</strong></p>
+```
+<h2>Headings are block elements</h2>
+<p>So are paragraphs. <em>These</em> are <strong>inline</strong></p>
+
+---
+
+### Box Model
+
+- Every HTML element is a box
+
+<Box bg="#dedede" px={5} pb={5} pt={4} mt={4} fontSize={5}>
+  Margin
+  <Box bg="papayawhip" px={4} pb={4} pt={1}>
+    Border
+    <Box bg="lightblue" px={5} pb={5} pt={4}>
+      Padding
+      <Box bg="white" p={6}>
+        Content
+      </Box>
+    </Box>
+  </Box>
+</Box>
+
+---
+
+### Box Properties
+
+- **Content** - The text, image, or media content
+- **Padding** - The space between the box's content and border
+- **Border** - Line that goes around content and padding
+- **Margin** - The space between the box and other boxes
+
+---
+
+### Padding
+
+```jsx
+div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+```
+<Box px={40} py={20} bg="lightblue">
+  Content
+</Box>
+
+---
+
+### Shorthand Property 
+
+```jsx
+  // Vertical Horizontal
+  padding: 20px 40px;
+
+  // Top Right Bottom Left
+  padding: 20px 40px 20px 40px;
+```
+
+<Box px={40} py={20} bg="lightblue">
+  Content
+</Box>
+
+---
+
+### Border
+
+```jsx
+div {
+  // Width Style Color
+  border: 8px solid lightblue
+}
+```
+
+<Box sx={{borderWidth: 8, borderStyle: "solid", borderColor: "lightblue"}}>
+  Content
+</Box>
+
+---
+
+### Margin
+
+<Box fontSize={5}>
+
+```jsx
+div {
+  // Vertical Horizontal
+  margin: 20px 40px;
+
+  // Top Right Bottom Left
+  margin: 20px 40px 20px 40px;
+}
+```
+
+</Box>
+
+<Box bg="lightblue" my={20}>Box 1</Box>
+<Box bg="pink">Box 2</Box>
+
+---
+
+### Vertical Margins Collapse
+
+<Box fontSize={5}>
+
+```jsx
+div {
+  // Vertical Horizontal
+  margin: 20px 40px;
+}
+```
+</Box>
+
+<Box bg="lightblue" my={20}>Box 1</Box>
+<Box bg="pink">Paragraph</Box>
+
+---
+
+### Margin vs Padding
+- Margins are always transparent
+- Vertical margins collapse
+- Can't click on margin
+- Inline elements ignore top and bottom margin
+
+---
+
+### Aligning Boxes
+
+```jsx
+div {
+  margin: auto; // center
+  margin-left: auto: // right-align
+  margin-right: auto: // left-align
+}
+```
+<Box width={1/2}>
+  <Box width={1/3} bg="lightblue" mx="auto">Box 1</Box>
+  <Box width={1/3} bg="pink" ml="auto">Box 2</Box>
+  <Box width={1/3} bg="#dedede" mr="auto">Box 3</Box>
+</Box>
+
+---
+
+### Flexbox 
+
+<Box>
+
+Two types of boxes:
+- **Flex containers** - parent element
+- **Flex items** - children elements
+
+</Box>
+
+<Box mt={4}>
+  Flex Container
+  <Flex sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4}>
+    <Box width={1/3} bg="lightblue" mx={2}>Item</Box>
+    <Box width={1/3} bg="lightblue" mx={2}>Item</Box>
+    <Box width={1/3} bg="lightblue" mx={2}>Item</Box>
+  </Flex>
+</Box>
+
+---
+
+### Flex Container
+
+```jsx
+div {
+  display: flex;
+}
+```
+
+---
+
+### Flex Container Properties
+
+- flex-direction - direction of items
+- justify-content - alignment of items along main axis
+- flex-wrap - wrap items to new line
+
+---
+
+```jsx
+div {
+  display: flex;
+  // row | column | row-reverse | column-reverse
+  flex-direction: column; 
+  flex-direction: column-reverse; 
+}
+```
+
+<Flex flexDirection="row"> 
+  <Flex flexDirection="column" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4} mr={4}>
+    <Box bg="lightblue" my={2}>Item 1</Box>
+    <Box bg="lightblue" my={2}>Item 2</Box>
+    <Box bg="lightblue" my={2}>Item 3</Box>
+  </Flex>
+  <Flex flexDirection="column-reverse" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4}>
+    <Box bg="lightblue" my={2}>Item 1</Box>
+    <Box bg="lightblue" my={2}>Item 2</Box>
+    <Box bg="lightblue" my={2}>Item 3</Box>
+  </Flex>
+</Flex>
+
+---
+
+```jsx
+div {
+  display: flex;
+  flex-direction: row;
+  // flex-start | flex-end | center |
+  // space-between | space-around | space-evenly
+  justify-content: flex-end;
+}
+```
+
+<Flex flexDirection="row" justifyContent="flex-end" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4} width={1/2}>
+  <Box bg="lightblue" mx={2}>Item 1</Box>
+  <Box bg="lightblue" mx={2}>Item 2</Box>
+  <Box bg="lightblue" mx={2}>Item 3</Box>
+</Flex>
+
+---
+
+Space Between
+
+<Flex flexDirection="row" justifyContent="space-between" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4} width={1/2}>
+  <Box bg="lightblue" mx={2}>Item 1</Box>
+  <Box bg="lightblue" mx={2}>Item 2</Box>
+  <Box bg="lightblue" mx={2}>Item 3</Box>
+</Flex>
+
+Space Around
+
+<Flex flexDirection="row" justifyContent="space-around" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4} width={1/2}>
+  <Box bg="lightblue" mx={2}>Item 1</Box>
+  <Box bg="lightblue" mx={2}>Item 2</Box>
+  <Box bg="lightblue" mx={2}>Item 3</Box>
+</Flex>
+
+Space Evenly
+
+<Flex flexDirection="row" justifyContent="space-evenly" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4} width={1/2}>
+  <Box bg="lightblue" mx={2}>Item 1</Box>
+  <Box bg="lightblue" mx={2}>Item 2</Box>
+  <Box bg="lightblue" mx={2}>Item 3</Box>
+</Flex>
+
+---
+
+```jsx
+div {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+}
+```
+<Flex flexDirection="row" flexWrap="wrap" justifyContent="space-evenly" sx={{borderStyle: "solid", borderWidth: 6, borderColor: "lightblue"}} p={4} width={400}>
+  <Box bg="lightblue" mx={2} my={2}>Item 1</Box>
+  <Box bg="lightblue" mx={2} my={2}>Item 2</Box>
+  <Box bg="lightblue" mx={2}>Item 3</Box>
+  <Box bg="lightblue" mx={2}>Item 4</Box>
+</Flex>
+
+---
+
+### Flex Item Properties
+- flex-basis - default size of item 
+- flex-grow - grow factor of item 
+- flex-shrink - allows item to shrink
+
+---
+
+## Bootstrap
+
+---
+
+### What is Bootstrap
+- CSS Framework
+- Easy to style and build website
+
+---
+
+## Exercise
