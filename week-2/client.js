@@ -289,8 +289,8 @@ for (const [c, items] of Object.entries(frodo.menu)) {
           <p>${item.description}</p>
           <p>$${item.price}</p>
         </div>
-        <button class="btn btn-outline-primary btn-sm button">
-          <i class="fas fa-plus"></i>
+        <button class="btn btn-outline-primary btn-sm menu-btn">
+          +
         </button>
       </div>
     `;

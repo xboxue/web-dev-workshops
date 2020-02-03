@@ -11,10 +11,6 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
-    />
     <link rel="stylesheet" href="styles.css" />
 
     <title>Document</title>
@@ -30,10 +26,10 @@
         <p>Delivery fee: $6</p>
 
         <select class="form-control">
-          <option>
+          <option value="frodo">
             Frodo's Flapjacks
           </option>
-          <option>
+          <option value="aragorn">
             Aragorn's Orc BBQ
           </option>
         </select>
@@ -43,6 +39,7 @@
         <div id="category">
           <p><a href="#">Breakfast</a></p>
         </div>
+
         <div id="menu">
           <div class="menu-item">
             <div>
@@ -52,11 +49,12 @@
                 <p>$9</p>
               </div>
             </div>
-            <button class="btn btn-outline-primary btn-sm button">
-              <i class="fas fa-plus"></i>
+            <button class="btn btn-outline-primary btn-sm menu-btn">
+              +
             </button>
           </div>
         </div>
+
         <div id="order">
           <h3>Order Summary</h3>
           <div class="order-item">
@@ -65,18 +63,8 @@
               <div>Quantity: 1</div>
               <p>Price: $9</p>
             </div>
-            <button class="btn btn-outline-danger btn-sm button">
-              <i class="fas fa-minus"></i>
-            </button>
-          </div>
-          <div class="order-item">
-            <div>
-              <h5>Sausage Sandwich</h5>
-              <div>Quantity: 1</div>
-              <p>Price: $9</p>
-            </div>
-            <button class="btn btn-outline-danger btn-sm button">
-              <i class="fas fa-minus"></i>
+            <button class="btn btn-outline-danger btn-sm menu-btn">
+              -
             </button>
           </div>
           <hr />

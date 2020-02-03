@@ -31,8 +31,9 @@
   justify-content: space-between;
 }
 
-.button {
-  height: 100%;
+.menu-btn {
+  height: 32px;
+  width: 32px;
 }
 
 .form-control {
