@@ -1,0 +1,154 @@
+import { Box, Flex } from "rebass";
+import { Select } from "@rebass/forms";
+import { Syllabus } from "../components/Syllabus";
+import { prism } from "mdx-deck/themes";
+
+export const themes = [prism];
+
+# React
+
+---
+
+### Recap
+
+- JSX
+- Components
+- Props
+- State
+
+---
+
+### Core Concept Review
+
+- component
+  - building blocks of React
+  - combines logic (JS) and presentation (JSX)
+- props
+  - data passed to a component
+  - immutable
+- state
+  - internal data specific to component
+  - data that changes over time
+
+---
+
+### Components
+
+```jsx
+const Hello = props => {
+  return (
+    <div>
+      <h1>Hello World!</h1>
+    </div>
+  );
+};
+```
+
+---
+
+map, filter, reduce
+
+- Returns new array
+
+```jsx
+arr = [1, 2, 3];
+
+arr.map(x => x * 2); // [2, 4, 6]
+arr.filter(x => x > 1); // [2, 3]
+arr.reduce((sum, x) => sum + x, 0); // 6
+```
+
+---
+
+### Lists
+
+- Display lists of items with map
+
+```jsx
+const List = () => {
+  const arr = [1, 2, 3];
+  return (
+    <ul>
+      {arr.map(x => (
+        <li>{x}</li>
+      ))}
+    </ul>
+  );
+};
+```
+
+---
+
+### Exercise
+
+- Pass numbers into component
+
+My list
+
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+
+---
+
+### Keys
+
+- List elements need unique keys
+- React needs to identify if list changes
+- Try not to use index
+
+```jsx
+return (
+  {arr.map(x => (
+    <li key={x}>{x}</li>
+  ))}
+);
+```
+
+---
+
+### Forms
+
+- Value is selected option
+
+```jsx
+return (
+  <select value="2">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+);
+```
+
+---
+
+### Forms
+
+- Store value in state
+
+```jsx
+const handleChange = e => {
+  setValue(e.target.value);
+};
+return (
+  <select value={value} onChange={handleChange}>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+);
+```
+
+---
+
+### Exercise
+
+Selected: 2
+
+<Select>
+  <option>Option 2</option>
+  <option>Option 1</option>
+</Select>
